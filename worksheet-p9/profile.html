@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profil Saya | PABW</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo">My<span>Profile.</span></a>
+
+            <ul class="nav-menu">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#tentang">Tentang Saya</a></li>
+                <li><a href="#proyek">Proyek</a></li>
+                <li><a href="#keahlian">Keahlian</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bagian Beranda -->
+    <main>
+        <section id="beranda" class="hero">
+            <div class="hero-content">
+                <p class="greeting">HALO, SELAMAT DATANG!</p>
+
+                <h1>Halo, saya <span id="nama-profil">Mahasiswa Informatika</span></h1>
+
+                <h2>Mahasiswa Teknik Informatika</h2>
+
+                <p class="description">
+                    Saya sedang belajar pemrograman web, JavaScript,
+                    dan pengembangan website sebagai bagian dari
+                    pembelajaran Pengembangan Aplikasi Berbasis Web.
+                </p>
+
+                <a href="#tentang" class="button">Kenali Saya</a>
+            </div>
+
+<div class="hero-image">
+    <div class="profile-placeholder">
+        <img src="img/foto.jpg" alt="Foto Razzan Chesta Ugama" class="profile-photo">
+    </div>
+</div>
+            </div>
+        </section>
+
+        <!-- Bagian Tentang Saya -->
+        <section id="tentang" class="section">
+            <p class="section-label">TENTANG SAYA</p>
+            <h2>Perkenalkan Diri Saya</h2>
+
+            <p>
+                Saya adalah mahasiswa yang sedang mempelajari
+                dasar-dasar pengembangan website. Saya tertarik
+                mempelajari HTML, CSS, JavaScript, serta cara membuat
+                website yang interaktif dan mudah digunakan.
+            </p>
+
+            <div class="info-container">
+                <div class="info-card">
+                    <h3>Nama</h3>
+                    <p>Mahasiswa Informatika</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Program Studi</h3>
+                    <p>Teknik Informatika</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Fokus Belajar</h3>
+                    <p>Web Development</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Proyek -->
+        <section id="proyek" class="section">
+            <p class="section-label">PROYEK</p>
+            <h2>Proyek yang Saya Kerjakan</h2>
+
+            <div id="filter" class="filter-row">
+                <button type="button" class="filter-button active" data-category="all">Semua</button>
+                <button type="button" class="filter-button" data-category="web">Web</button>
+                <button type="button" class="filter-button" data-category="javascript">JavaScript</button>
+                <button type="button" class="filter-button" data-category="desain">Desain</button>
+                <button type="button" class="filter-button" data-category="mobile">Mobile</button>
+            </div>
+
+            <ul id="list" class="project-list"></ul>
+
+            <p id="empty-message" class="empty-message" hidden>
+                Belum ada proyek pada kategori ini. Coba pilih kategori lain.
+            </p>
+        </section>
+
+        <!-- Bagian Keahlian -->
+        <section id="keahlian" class="section skills-section">
+            <p class="section-label">KEAHLIAN</p>
+            <h2>Hal yang Sedang Saya Pelajari</h2>
+
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h3>HTML</h3>
+                    <p>Membangun struktur halaman website.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>CSS</h3>
+                    <p>Mengatur tampilan dan desain website.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>Membuat website menjadi interaktif.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Kontak -->
+        <section id="kontak" class="section contact-section">
+            <p class="section-label">KONTAK</p>
+            <h2>Hubungi Saya</h2>
+
+            <p>
+                Terima kasih telah mengunjungi halaman profil saya.
+                Saya masih terus belajar dan mengembangkan kemampuan
+                dalam bidang teknologi.
+            </p>
+
+            <a href="mailto:email@example.com" class="button">
+                Kirim Email
+            </a>
+
+            <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="field-name">Nama</label>
+                    <input type="text" id="field-name" name="name" autocomplete="name"
+                           aria-describedby="error-name">
+                    <p id="error-name" class="error-message" hidden></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="field-email">Email</label>
+                    <input type="email" id="field-email" name="email" autocomplete="email"
+                           aria-describedby="error-email">
+                    <p id="error-email" class="error-message" hidden></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="field-message">Pesan</label>
+                    <textarea id="field-message" name="message" rows="4"
+                              aria-describedby="error-message"></textarea>
+                    <p id="error-message" class="error-message" hidden></p>
+                </div>
+
+                <button type="submit" id="submit-button" class="button">Kirim Pesan</button>
+                <p id="form-status" class="form-status" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Profil Mahasiswa. Dibuat untuk pembelajaran PABW.</p>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/dom.js"></script>
+
+</body>
+</html>
