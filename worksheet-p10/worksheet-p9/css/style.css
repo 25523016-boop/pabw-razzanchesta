@@ -1,0 +1,436 @@
+/* Pengaturan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fc;
+    color: #222;
+    line-height: 1.7;
+}
+
+/* Navigasi */
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #4776e6;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #4776e6;
+}
+
+/* Beranda */
+.hero {
+    max-width: 1100px;
+    min-height: 520px;
+    margin: auto;
+    padding: 70px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.greeting,
+.section-label {
+    color: #4776e6;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #4776e6;
+}
+
+.hero h2 {
+    font-size: 21px;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+.description {
+    color: #666;
+    max-width: 520px;
+    margin-bottom: 28px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #4776e6;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #315ac0;
+    transform: translateY(-2px);
+}
+
+/* Ilustrasi profil */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-placeholder {
+    width: 260px;
+    height: 300px;
+    background: linear-gradient(135deg, #dce7ff, #b4c8ff);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(71, 118, 230, 0.15);
+}
+
+.profile-placeholder span {
+    font-size: 85px;
+}
+
+.profile-placeholder p {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #315ac0;
+}
+
+/* Bagian umum */
+.section {
+    padding: 80px 25px;
+    text-align: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.section > p:not(.section-label) {
+    max-width: 750px;
+    margin: 0 auto 25px;
+    color: #666;
+}
+
+/* Kartu informasi */
+.info-container,
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.info-card,
+.skill-card {
+    background-color: white;
+    padding: 28px 20px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s;
+}
+
+.info-card:hover,
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card h3,
+.skill-card h3 {
+    color: #4776e6;
+    margin-bottom: 10px;
+}
+
+.info-card p,
+.skill-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Bagian keahlian */
+.skills-section {
+    max-width: none;
+    background-color: #eef2ff;
+}
+
+.skills-section .skills-container {
+    max-width: 1050px;
+    margin: 35px auto 0;
+}
+
+/* Bagian kontak */
+.contact-section {
+    padding-top: 80px;
+    padding-bottom: 90px;
+}
+
+.contact-section .button {
+    margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #202b46;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    font-size: 13px;
+}
+
+/* Tampilan HP dan tablet */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .profile-placeholder {
+        width: 220px;
+        height: 250px;
+    }
+
+    .info-container,
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section h2 {
+        font-size: 25px;
+    }
+}
+
+/* ===== Pertemuan 9: proyek, filter, dan formulir ===== */
+.filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.filter-button {
+    padding: 8px 20px;
+    border: 2px solid #4776e6;
+    border-radius: 999px;
+    background-color: white;
+    color: #4776e6;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-button:hover {
+    background-color: #eef2ff;
+}
+
+.filter-button.active {
+    background-color: #4776e6;
+    color: white;
+}
+
+.project-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    text-align: left;
+}
+
+.card {
+    background-color: white;
+    padding: 24px 20px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #4776e6;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+}
+
+.card .card-meta {
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #315ac0;
+}
+
+.empty-message {
+    margin-top: 20px;
+    padding: 24px;
+    background-color: white;
+    border: 2px dashed #b4c8ff;
+    border-radius: 14px;
+    color: #666;
+}
+
+.empty-message[hidden],
+.error-message[hidden] {
+    display: none;
+}
+
+/* Formulir */
+.contact-form {
+    max-width: 520px;
+    margin: 30px auto 0;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 2px solid #d5dcf0;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4776e6;
+}
+
+.form-group [aria-invalid="true"] {
+    border-color: #d93636;
+}
+
+.error-message {
+    color: #d93636;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.contact-form button.button {
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+}
+
+.contact-form button.button:disabled {
+    background-color: #a9b8e0;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-status {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #1f8a4c;
+}
+
+@media (max-width: 768px) {
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+}
+.profile-placeholder {
+    overflow: hidden;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
